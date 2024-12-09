@@ -9,7 +9,7 @@ const cors = require('cors');
 
 // Configure CORS
 const corsOptions = {
-  origin: 'https://alewioyin.github.io', // Allow requests from your frontend
+  origin: 'https://alewioyin.github.io/HealthTech', // Allow requests from your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Allow cookies if needed
 };
