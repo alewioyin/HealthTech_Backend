@@ -5,6 +5,19 @@ const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const dotenv = require('dotenv');
 const path = require('path');
+const cors = require('cors');
+
+// Configure CORS
+const corsOptions = {
+  origin: 'https://alewioyin.github.io', // Allow requests from your frontend
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow cookies if needed
+};
+
+app.use(cors(corsOptions));
+
+app.options('*', cors(corsOptions)); // Handle preflight requests
+
 
 //SET UP ENV ENVIRONMENT
 dotenv.config();
